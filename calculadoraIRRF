@@ -1,0 +1,22 @@
+# alíquotas de 2023
+
+print("Olá! Bem vindo(a) a calculadora de IRRF!")
+print("\n")
+
+salarioBruto = float(input("Digite o salário bruto: "))
+
+if salarioBruto <= 1903.98:
+    descontoIRRF = 0
+elif salarioBruto <= 2826.65:
+    descontoIRRF = salarioBruto * 0.075 - 142.80
+elif salarioBruto <= 3751.05:
+    descontoIRRF = salarioBruto * 0.15 - 354.80
+elif salarioBruto <= 4664.68:
+    descontoIRRF = salarioBruto * 0.225 - 636.13
+else:
+    descontoIRRF = salarioBruto * 0.275 - 869.36
+
+salarioLiquido = salarioBruto - descontoIRRF
+
+print("Desconto do IRRF:", descontoIRRF)
+print("Salário líquido:", salarioLiquido)
