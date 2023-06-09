@@ -1,0 +1,20 @@
+from datetime import datetime
+
+class Pessoa:
+   def __init__(si, nome, sobrenome, aniversario):
+    si.nome = nome
+    si.sobrenome = sobrenome
+    si.aniversario = aniversario
+
+    def personage(si):
+        currentyear = datetime.now().year
+        si.aniversario = int(currentyear - si.aniversario)
+        return si.aniversario
+
+
+pessoa1 = Pessoa('Rebeca', 'Silva', '1994')
+pessoa2 = Pessoa('Cristina', 'Mendes', '1996')
+pessoa3 = Pessoa('João', 'Machado', '2000')
+pessoa4 = Pessoa('Sabrina', 'Delfante', '2002')
+
+print(Pessoa.personage(pessoa1))
