@@ -1,20 +1,22 @@
 from datetime import datetime
 
-class Pessoa:
-   def __init__(si, nome, sobrenome, aniversario):
-    si.nome = nome
-    si.sobrenome = sobrenome
-    si.aniversario = aniversario
+class CalculadoraIdade:
+    def __init__(self, nome, sobrenome, aniversario):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.aniversario = aniversario
 
-    def personage(si):
-        currentyear = datetime.now().year
-        si.aniversario = int(currentyear - si.aniversario)
-        return si.aniversario
+    def calcular_idade(self):
+        current_year = datetime.now().year
+        idade = current_year - int(self.aniversario)
+        return idade
 
 
-pessoa1 = Pessoa('Rebeca', 'Silva', '1994')
-pessoa2 = Pessoa('Cristina', 'Mendes', '1996')
-pessoa3 = Pessoa('João', 'Machado', '2000')
-pessoa4 = Pessoa('Sabrina', 'Delfante', '2002')
+nome = input("Digite seu nome: ")
+sobrenome = input("Digite seu sobrenome: ")
+aniversario = input("Digite seu ano de nascimento: ")
 
-print(Pessoa.personage(pessoa1))
+calculadora = CalculadoraIdade(nome, sobrenome, aniversario)
+idade = calculadora.calcular_idade()
+
+print("A idade de", nome, sobrenome, "é", idade, "anos.")
