@@ -1,0 +1,22 @@
+# alíquota de 2023
+
+print("Olá! Bem vindo(a) a calculadora INSS!")
+print("\n")
+
+salarioBruto = float(input("Digite o salário bruto: "))
+
+if salarioBruto <= 1100:
+    descontoINSS = salarioBruto * 0.075
+elif salarioBruto <= 2203.48:
+    descontoINSS = salarioBruto * 0.09
+elif salarioBruto <= 3305.22:
+    descontoINSS = salarioBruto * 0.12
+elif salarioBruto <= 6433.57:
+    descontoINSS = salarioBruto * 0.14
+else:
+    descontoINSS = 751.99
+
+salarioLiquido = salarioBruto - descontoINSS
+
+print("Desconto do INSS:", descontoINSS)
+print("Salário líquido:", salarioLiquido)
